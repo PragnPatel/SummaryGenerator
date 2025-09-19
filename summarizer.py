@@ -74,10 +74,12 @@ def generate_summary(text,top_n):
     
     nltk.download('stopwords')
     nltk.download('punkt')
+     # Optional
+    nltk.download('punkt_tab')
     
     stop_words = stopwords.words('english')
     summarize_text = []
-    
+
     # Step1: read text and tokenize
     sentences = read_article(text)
     
@@ -97,6 +99,7 @@ def generate_summary(text,top_n):
     
     # Step 6 : outpur the summarized version
     return " ".join(summarize_text),len(sentences)
+
 
 
 
