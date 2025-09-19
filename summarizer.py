@@ -95,10 +95,11 @@ def generate_summary(text,top_n):
     
     # Step 5: get the top n number of sentences based on rank    
     for i in range(top_n):
-        summarize_text.append(ranked_sentences[i][1])
+        summarize_text.append(ranked_sentences[i-1][1])
     
     # Step 6 : outpur the summarized version
     return " ".join(summarize_text),len(sentences)
+
 
 
 
