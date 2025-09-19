@@ -44,12 +44,13 @@ else:
 if st.button("Summarize"):
     if input.strip():
         with st.spinner("Generating Sumary"):
-            summary, original_length = generate_summary(input, number_of_summary_line)
+            summary, original_length = generate_summary(input, num_of_summary_line)
         st.subheader("Summary")
         st.write(summary)
         st.subheader("Original Length")
         st.write(original_length)
     else:
         st.warning("Please enter some text to summarize")
+
 
 
